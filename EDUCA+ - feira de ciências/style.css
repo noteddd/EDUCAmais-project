@@ -1,0 +1,484 @@
+/* Estilo geral */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: rgb(247, 232, 217);
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
+}
+
+.flex {
+    height: 100%;
+    display: flex;
+}
+h1 { 
+    color: rgb(201, 64, 80);
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(217, 109, 109);
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-contato button:hover {
+    transform: scale(1.05);
+}
+
+main{
+    height: 100%;
+}
+
+h2.titulo {
+    color: rgb(230, 155, 142);
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: rgb(201, 64, 80);
+
+}
+
+/* Estilo do cabeçalho */
+
+header {
+    padding: 20px 4%;
+    background-color: rgb(241, 200, 172);
+}
+
+header .logo {
+    width: 5vw;
+    height: 5vh;
+    background-color: #c94050;
+    border-radius: 15px;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a {
+    color: rgb(230, 155, 142);
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+header nav.menu-desktop a:hover {
+    color: rgb(217, 109, 109);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+
+/* menu mobile */
+.btn-abrir i {
+    color: #c94050; 
+    font-size: 40px;
+}
+
+.menu-mobile {
+    background-color: rgb(217, 109, 109);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100000;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.hype-menu {
+    width: 70%;
+}
+
+.menu-mobile.hype-menu ~ .overlay-menu {
+    display: block;
+}
+
+.menu-mobile .btn-fechar i {
+    color: #c94050;
+    font-size: 30px;
+}
+
+.menu-mobile .btn-fechar {
+    padding: 5% 5%;
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+}
+
+.menu-mobile nav ul li a {
+    color: white;
+    font-size: 20px;
+    font-weight: 300px;
+    padding: 20px 4%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: #c94050;
+}
+
+.overlay-menu {
+    background-color: rgba(0, 0, 0, 0.637);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+/* estilo do topo */
+
+.btn-abrir {
+    display: none;
+}
+
+
+section.principal {
+    padding: 20px 4%;
+    height: 100%;
+}
+
+section.principal .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.principal h1 {
+    font-size: 38px;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.principal .txt p {
+    color: rgb(217, 109, 109);
+    margin: 40px 0;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(89,89,89);
+    background: linear-gradient(149deg, rgb(230, 155, 142) 0%, rgb(241, 200, 172) 100%);
+    width: 40vw;
+    height: 50vh;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.textfield {
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgb(255, 200, 190);
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield > label {
+    color: rgb(201, 64, 80);
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder {
+    color: rgba(201, 64, 80, 0.425);
+}
+
+.btn-login {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 40px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(217, 109, 109);
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn-login:hover {
+    transform: translateY(3px);
+    box-shadow: inset 12px 18px 20px rgba(201, 64, 80, 0.452);
+}
+
+/* nossos elementos */
+
+section.elementos {
+    padding: 40px 4%;
+}
+
+section.elementos .flex {
+    gap: 60px;
+}
+
+.elementos .planos-box {
+    color: rgb(217, 109, 109);
+    padding: 40px;
+    border: 2px solid rgb(217, 109, 109);
+    border-radius: 15px;
+    margin-top: 45px;
+    transition: 0.3s;
+}
+
+.elementos .planos-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(201, 64, 80, 0.452);
+}
+
+
+.elementos .planos-box i {
+    font-size: 48px;
+    justify-content: center;
+    display: flex;
+    padding-bottom: 15%;
+}
+
+.elementos .planos-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* estilo saiba mais */
+
+section.feedback {
+    padding: 40px 4%;
+    height: 100%;
+}
+section.feedback .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.feedback .content-feedback {
+    width: 80vw;
+    height: 40vh;
+    border-radius: 10px;
+    background-color: rgb(201, 64, 80);
+}
+
+.feedback .txt-feedback {
+    color: rgb(201, 64, 80);
+}
+
+.feedback .txt-feedback h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.feedback .txt-feedback p {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.feedback .txt-feedback .btn-content i {
+    color: white;
+}
+
+.btn-content button {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(217, 109, 109);
+    font-size: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-content {
+    text-align: center;
+}
+
+.feedback .txt-feedback .btn-content button:hover {
+    transform: scale(1.05);
+}
+
+section.contato {
+    padding: 40px 4%;
+    height: 100%;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+form input, form textarea {
+    width: 100%;
+    background-color: rgb(255, 200, 190);
+    border: none;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+form input::placeholder, textarea::placeholder{
+    color: rgba(201, 64, 80, 0.425);
+}
+
+form textarea {
+    resize: none;
+    max-height: 150px;
+}
+
+form textarea::placeholder {
+   color: rgba(201, 64, 80, 0.425);
+}
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input {
+    width: 120px;
+    background-color: rgb(217, 109, 109);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form .btn-enviar input:hover {
+    transform: scale(1.05);
+}
+
+/* estilo do footer */
+
+footer {
+    padding: 40px 4%;
+    background-color: rgb(241, 200, 172);
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0px;
+}
+
+.borda {
+    border-bottom: 2px solid #c94050;
+}
+
+footer .line-footer p i {
+    color: #c94050;
+    font-size: 22px;
+}
+
+footer .line-footer p {
+    color: #c940506e;
+}
+
+footer .line-footer p a {
+    text-decoration: none;
+    color: #c94050;
+}
+
+footer .logo-footer {  
+    width: 5vw;
+    height: 10vh;
+    border-radius: 15px;
+    background-color: #c94050;
+}
+
+footer .line-footer i {
+    color: rgb(230, 155, 142);
+}
+
+@media screen and (max-width: 1020px) {
+    /* CLASSES GERAIS */
+    .flex {
+        flex-direction: column;
+    }
+
+    .principal .flex {
+        flex-direction: column-reverse;
+    }
+
+    /* CABEÇALHO */
+    .menu-desktop, .btn-contato {
+        display: none
+    }
+
+    /* topo do site */
+
+    /* MAIN */
+
+    .card {
+        display: none;
+    }
+
+    .feedback .txt-feedback h2 {
+        font-size: 34px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .btn-content {
+        text-align: center;
+    }
+
+    .btn-abrir {
+        display: block;
+    }
+
+}
+
+
